@@ -30,6 +30,13 @@ clickEvent.forEach(anchor => {
     });
 });
 
+const opacImg = document.querySelectorAll('img');
+opacImg.forEach(anchor => {
+    anchor.addEventListener('click', event => {
+        event.target.style.opacity = "0.5";
+    });
+});
+
 // Copy Event
 const selectEvent = document.querySelectorAll('p');
 selectEvent.forEach(anchor => {
@@ -38,8 +45,7 @@ selectEvent.forEach(anchor => {
     });
 });
 
-// console.log(window);
-// const backColor = document.querySelector('body');
+// Scroll Event
 window.addEventListener('scroll', function() {
-    document.body.style.backgroundColor = "grey";
+    document.body.style.backgroundColor = "lightgrey";
 })
