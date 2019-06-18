@@ -1,10 +1,25 @@
 // Your code goes here
 
 // Mouseover Event
-const mouseOver = document.querySelector('.main-navigation');
-mouseOver.addEventListener('mouseenter', event => {
+const mouseOverNav = document.querySelector('.main-navigation');
+mouseOverNav.addEventListener('mouseenter', event => {
+    event.preventDefault();
     event.target.style.backgroundColor = 'maroon';
     event.target.style.color = 'white';
+
+    const mouseOverFooter = document.querySelector('.footer');
+    mouseOverFooter.addEventListener('mouseenter', event => {
+    event.target.style.backgroundColor = 'maroon';
+    event.target.style.color = 'white';
+});
+
+});
+
+const mouseNavBig = document.querySelectorAll('.nav-link');
+mouseNavBig.forEach(anchor => {
+    anchor.addEventListener('mouseenter', event => {
+        event.target.style.fontSize = "20px";
+    });
 });
 
 // Mouseleave Event
@@ -48,4 +63,13 @@ selectEvent.forEach(anchor => {
 // Scroll Event
 window.addEventListener('scroll', function() {
     document.body.style.backgroundColor = "lightgrey";
-})
+});
+
+// Drag Event
+const imgDrag = document.querySelectorAll('img');
+imgDrag.forEach(anchor => {
+    anchor.addEventListener("drag", event => {
+        event.target.style.display = "none";
+        event.preventDefault();
+    });
+});
