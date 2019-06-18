@@ -18,11 +18,18 @@ mouseLeave.addEventListener('mouseleave', event => {
 const btnClick = document.querySelector('.btn');
 btnClick.addEventListener('dblclick', event => {
     alert('Sign up today!');
-    event.preventDefault();
+    // event.preventDefault();
 });
 
 // Click Event
 const clickEvent = document.querySelector('h2');
 clickEvent.addEventListener('click', event => {
     event.target.style.fontSize = "40px";
+});
+
+// Copy Event
+const selectEvent = document.querySelector('p');
+selectEvent.addEventListener('copy', event => {
+    alert("Don't copy from us!");
+    event.preventDefault();
 });
