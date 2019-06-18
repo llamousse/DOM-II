@@ -15,21 +15,25 @@ mouseLeave.addEventListener('mouseleave', event => {
 });
 
 // Dblclick Event 
-const btnClick = document.querySelector('.btn');
-btnClick.addEventListener('dblclick', event => {
-    alert('Sign up today!');
-    // event.preventDefault();
+const btnClick = document.querySelectorAll('.btn');
+btnClick.forEach(anchor => {
+    anchor.addEventListener('dblclick', event => {
+        alert('Sign up today!');
+    });
 });
 
 // Click Event
-const clickEvent = document.querySelector('h2');
-clickEvent.addEventListener('click', event => {
-    event.target.style.fontSize = "40px";
+const clickEvent = document.querySelectorAll('h2');
+clickEvent.forEach(anchor => {
+    anchor.addEventListener('click', event => {
+        event.target.style.fontSize = "40px";
+    });
 });
 
 // Copy Event
-const selectEvent = document.querySelector('p');
-selectEvent.addEventListener('copy', event => {
-    alert("Don't copy from us!");
-    event.preventDefault();
+const selectEvent = document.querySelectorAll('p');
+selectEvent.forEach(anchor => {
+    anchor.addEventListener('copy', event => {
+        alert("Don't copy from us!");
+    });
 });
