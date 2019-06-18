@@ -37,3 +37,9 @@ selectEvent.forEach(anchor => {
         alert("Don't copy from us!");
     });
 });
+
+// console.log(window);
+// const backColor = document.querySelector('body');
+window.addEventListener('scroll', function() {
+    document.body.style.backgroundColor = "grey";
+})
